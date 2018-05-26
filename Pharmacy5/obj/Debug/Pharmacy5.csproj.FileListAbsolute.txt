@@ -1,0 +1,294 @@
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\ApplicationInsights.config
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Pharmacy5.dll.config
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Pharmacy5.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Pharmacy5.pdb
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\csc.exe
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\csc.exe.config
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\csc.rsp
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\csi.exe
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\csi.exe.config
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\csi.rsp
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\System.AppContext.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\System.Console.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\System.Diagnostics.Process.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\System.IO.Compression.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\System.IO.FileSystem.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\System.IO.Pipes.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\System.Reflection.Metadata.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\System.Security.AccessControl.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\System.Security.Claims.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\System.Security.Principal.Windows.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\System.Threading.Thread.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\System.ValueTuple.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\System.Xml.XmlDocument.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\System.Xml.XPath.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\vbc.exe
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\vbc.exe.config
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\vbc.rsp
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\VBCSCompiler.exe
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\VBCSCompiler.exe.config
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Antlr3.Runtime.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\EntityFramework.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\EntityFramework.SqlServer.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.AI.Agent.Intercept.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.AI.DependencyCollector.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.AI.Web.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.AI.WindowsServer.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.ApplicationInsights.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.AspNet.Identity.Core.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.Owin.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.Owin.Security.Cookies.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.Owin.Security.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.Owin.Security.Facebook.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.Owin.Security.Google.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.Owin.Security.OAuth.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.Owin.Security.Twitter.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.Web.Infrastructure.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Newtonsoft.Json.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Owin.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\System.Web.Helpers.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\System.Web.Mvc.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\System.Web.Optimization.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\System.Web.Razor.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\System.Web.WebPages.Deployment.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\System.Web.WebPages.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\System.Web.WebPages.Razor.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\WebGrease.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\System.Web.Helpers.xml
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\System.Web.Mvc.xml
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\System.Web.Optimization.xml
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\System.Web.Razor.xml
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\System.Web.WebPages.xml
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\System.Web.WebPages.Deployment.xml
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\System.Web.WebPages.Razor.xml
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Antlr3.Runtime.pdb
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Newtonsoft.Json.xml
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\EntityFramework.xml
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\EntityFramework.SqlServer.xml
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.AspNet.Identity.Core.xml
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.Owin.xml
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.Owin.Security.xml
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.Owin.Security.Facebook.xml
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.Owin.Security.Cookies.xml
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.Owin.Security.OAuth.xml
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.Owin.Security.Google.xml
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.Owin.Security.Twitter.xml
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.ApplicationInsights.xml
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.AI.DependencyCollector.xml
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.AI.WindowsServer.xml
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\Microsoft.AI.Web.xml
+E:\PharmacyMS\Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.csproj.CoreCompileInputs.cache
+E:\PharmacyMS\Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.csproj.CopyComplete
+E:\PharmacyMS\Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.pdb
+E:\PharmacyMS\Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.initial_creating_database_drug_stockhistroy_order_identity.resources
+E:\PharmacyMS\Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.csproj.GenerateResource.cache
+E:\PharmacyMS\Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.initial_creating_database_drug_stockhistroy_order.resources
+E:\PharmacyMS\Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.correcting_foreign_key.resources
+E:\PharmacyMS\Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.search_model.resources
+E:\PharmacyMS\Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.Adding_first_drug_Manually.resources
+E:\PharmacyMS\Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.adding_imgurl_to_drug_model.resources
+E:\PharmacyMS\Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.editting_drug_model.resources
+E:\PharmacyMS\Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.editting_drug_model_2.resources
+E:\PharmacyMS\Pharmacy5\Pharmacy5\bin\roslyn\System.Collections.Immutable.dll
+E:\PharmacyMS\Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.csprojResolveAssemblyReference.cache
+E:\PharmacyMS\Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.adding_cart_model.resources
+E:\PharmacyMS\Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.adding_searhHistory_model.resources
+E:\PharmacyMS\Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.transaction_table.resources
+E:\PharmacyMS\Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.checking_changes.resources
+E:\PharmacyMS\Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.editting_transaction_table.resources
+E:\PharmacyMS\Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.validating_transactions_tables.resources
+E:\PharmacyMS\Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.validating_transactions_table_2.resources
+E:\PharmacyMS\Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.Autocomplete_Implementation.resources
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\ApplicationInsights.config
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Pharmacy5.dll.config
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Pharmacy5.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Pharmacy5.pdb
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\csc.exe
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\csc.exe.config
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\csc.rsp
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\csi.exe
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\csi.exe.config
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\csi.rsp
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\System.AppContext.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\System.Collections.Immutable.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\System.Console.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\System.Diagnostics.Process.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\System.IO.Compression.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\System.IO.FileSystem.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\System.IO.Pipes.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\System.Reflection.Metadata.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\System.Security.AccessControl.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\System.Security.Claims.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\System.Security.Principal.Windows.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\System.Threading.Thread.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\System.ValueTuple.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\System.Xml.XmlDocument.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\System.Xml.XPath.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\vbc.exe
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\vbc.exe.config
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\vbc.rsp
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\VBCSCompiler.exe
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\roslyn\VBCSCompiler.exe.config
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Antlr3.Runtime.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\EntityFramework.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\EntityFramework.SqlServer.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.AI.Agent.Intercept.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.AI.DependencyCollector.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.AI.Web.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.AI.WindowsServer.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.ApplicationInsights.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.AspNet.Identity.Core.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.Owin.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.Owin.Security.Cookies.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.Owin.Security.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.Owin.Security.Facebook.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.Owin.Security.Google.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.Owin.Security.OAuth.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.Owin.Security.Twitter.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.Web.Infrastructure.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Newtonsoft.Json.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Owin.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\System.Web.Helpers.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\System.Web.Mvc.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\System.Web.Optimization.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\System.Web.Razor.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\System.Web.WebPages.Deployment.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\System.Web.WebPages.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\System.Web.WebPages.Razor.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\WebGrease.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\System.Web.Helpers.xml
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\System.Web.Mvc.xml
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\System.Web.Optimization.xml
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\System.Web.Razor.xml
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\System.Web.WebPages.xml
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\System.Web.WebPages.Deployment.xml
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\System.Web.WebPages.Razor.xml
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Antlr3.Runtime.pdb
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Newtonsoft.Json.xml
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\EntityFramework.xml
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\EntityFramework.SqlServer.xml
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.AspNet.Identity.Core.xml
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.Owin.xml
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.Owin.Security.xml
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.Owin.Security.Facebook.xml
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.Owin.Security.Cookies.xml
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.Owin.Security.OAuth.xml
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.Owin.Security.Google.xml
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.Owin.Security.Twitter.xml
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.ApplicationInsights.xml
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.AI.DependencyCollector.xml
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.AI.WindowsServer.xml
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\Microsoft.AI.Web.xml
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.csprojResolveAssemblyReference.cache
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.initial_creating_database_drug_stockhistroy_order_identity.resources
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.initial_creating_database_drug_stockhistroy_order.resources
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.correcting_foreign_key.resources
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.search_model.resources
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.Adding_first_drug_Manually.resources
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.adding_imgurl_to_drug_model.resources
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.editting_drug_model.resources
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.editting_drug_model_2.resources
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.adding_cart_model.resources
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.adding_searhHistory_model.resources
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.transaction_table.resources
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.checking_changes.resources
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.editting_transaction_table.resources
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.validating_transactions_tables.resources
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.validating_transactions_table_2.resources
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.Autocomplete_Implementation.resources
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.csproj.GenerateResource.cache
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.csproj.CoreCompileInputs.cache
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.csproj.CopyComplete
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.pdb
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.Adding_Properties_to_Identity_User_Table.resources
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.adding_mainstock_model.resources
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.changing_TransDate_from_DateTime_to_String_Property.resources
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.changing_Dose_datatype_from_float_to_string.resources
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.Editing_drugs_and_mainstock_models.resources
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.changing_expireDate_to_DateTime_from_String.resources
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.editing_expireDate_to_making_it_nulluable.resources
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.editting_transaction_model.resources
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.SMS_model.resources
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\SendGrid.dll
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\SendGrid.pdb
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\bin\SendGrid.xml
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.adding_barcode_to_drug_model.resources
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.normalizing_transaction_table.resources
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.editting_drug_model_to_get_transaction_foreign_key_working.resources
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.editing_transaction_model0.resources
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.editing_drugs_model.resources
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.cleaning_up_transaction_and_drugs_models.resources
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.cleaning_transaction_drugs_and_mainstock_models.resources
+E:\DBC\ASP.NET\Clone Pharmacy5\Pharmacy5\obj\Debug\Pharmacy5.Migrations.editing_stockhistorys_model.resources

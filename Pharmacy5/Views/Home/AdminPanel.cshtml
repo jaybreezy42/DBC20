@@ -1,0 +1,402 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
+    <title>Creative - Start Bootstrap Theme</title>
+
+    @*<link href="~/startbootstrap-creative-master/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />*@
+    <!-- Custom fonts for this template -->
+
+
+    <link href="~/startbootstrap-creative-master/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="~/startbootstrap-creative-master/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="~/startbootstrap-creative-master/css/creative.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/rotating-card.css" rel="stylesheet" />
+    <link href="~/Content/custom.css" rel="stylesheet" />
+    <link href="~/Content/main1form.css" rel="stylesheet" />
+</head>
+<body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="/Home/Home2/">LizMat Pharmacy</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a role="button" class="dropdown-toggle hover nav-link js-scroll-trigger" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#" title="Manage Employees">Employee</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item nav-link js-scroll-trigger contactnav" href="#" id="btnmodalreg" data-toggle="modal" data-target="#register" data-whatever="getbootstrap">Registration</a>
+
+                            @*<a href="" id="btnrolemodal" data-toggle="modal" data-target="" data-whatever="" class="dropdown-item nav-link js-scroll-trigger">Assign Roles</a>*@
+                        </div>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger servicesnav" href="/Home/Inventory/" title="">Inventory</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger contactnav" href="#contact">Reports</a>
+                    </li>
+
+                    @using Microsoft.AspNet.Identity
+                    @if (Request.IsAuthenticated)
+                    {
+                        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            <ul class="nav navbar-nav navbar-right">
+
+                                @if (ViewBag.UserRole == "admin")
+                                {
+                                    <li class="nav-item">
+                                        @Html.ActionLink("Dashboard", "AdminPanel", "Home", routeValues: null, htmlAttributes: new { @title = "Admin Page", @class = "nav-link js-scroll-trigger" })
+                                    </li>
+                                }
+
+                                <li class="nav-item">
+                                    @Html.ActionLink("Hello " + User.Identity.GetUserName(), "", "", routeValues: null, htmlAttributes: new { @title = "", @class = "nav-link js-scroll-trigger" })
+                                </li>
+                                <li class="nav-item"><a class="nav-link js-scroll-trigger contactnav" href="javascript:document.getElementById('logoutForm').submit()">LOG OFF</a></li>
+                            </ul>
+                        }
+                    }
+                    else
+                    {
+                        @*<li class="nav-item">@Html.ActionLink("REGISTER", "Register", "Account", routeValues: null, htmlAttributes: new { @id = "registerLink", @class = "nav-link js-scroll-trigger" })</li>*@
+                        @*<li class="nav-item">@Html.ActionLink("LOG IN", "Login", "Account", routeValues: null, htmlAttributes: new { @id = "loginLink", @class = "nav-link js-scroll-trigger" })</li>*@
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger contactnav" href="#" id="btnmodalreg" data-toggle="modal" data-target="#register" data-whatever="getbootstrap">REGISTER</a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger contactnav" href="#" id="btnmodal" data-toggle="modal" data-target="#exampleModal" data-whatever="getbootstrap">LOG IN</a>
+                        </li>
+                    }
+
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <section>
+        <div class="container">
+            <div class="row">
+                @foreach (var item in ViewBag.employees)
+    {
+            <div class="col-md-4 col-sm-6">
+                <div class="card-container">
+                    <div class="card">
+                        <div class="front">
+                            <div class="cover">
+                                <!-- <img src="images/cover2.png"/> -->
+                                <img style="opacity:0.3;" class="img-circle" src="/Images/@item.ImageUrl" />
+                            </div>
+                            <div class="user">
+                                <img class="img-circle" src="/Images/@item.ImageUrl" />
+                            </div>
+                           <div class="content">
+                               <div class="main" id="@item.Id">
+
+                                   <h3 class="name">@item.FirstName @item.LastName</h3>
+                                   <p class="profession"></p>
+                                   <p class="text-center"></p>
+
+                               </div>
+                                <div class="footer">
+                                    <i class="fa fa-mail-forward"></i>
+                                </div>
+                            </div>
+                        </div> <!-- end front panel -->
+                        <div class="back">
+                            <div class="header">
+                                <h3 class="motto">Employee Details</h3>
+                            </div>
+                            <div class="content">
+                                <div class="main">
+                                    <p class="text-center">@item.Email</p>
+                                    <p class="text-center"></p>
+                                    <p class="text-center"></p>
+                                    <p class="text-center"></p>
+                                    <h4 class="text-center"></h4>
+                                    <p class="text-center"></p>
+                                </div>
+                            </div>
+                            <div class="footer">
+                                @*<div class="social-links text-center">
+                                <a href="" id="btneditmodal" title="Edit" data-toggle="modal" data-target="#registerupdatemodal" data-whatever="@getbootstrap"  class="btn btn-primary flat"><i class="fa fa-edit" ></i>Edit</a>
+                                <a href="" id="btnrolemodal" title="Assign Role" data-toggle="modal" data-target="#roleupdatemodal" data-whatever="@getbootstrap" data-js="<?php echo $row['empID']?>" class="btn btn-primary flat" ><i class="fa fa-at">Role</i></a>
+                                <a href="" class=""><i class=""></i></a>
+                            </div>
+                        </div>*@
+                            </div> @*end back panel*@
+                        </div> @*end card*@
+                    </div> @*end card-container*@
+                </div> @*end col sm 3*@
+
+                @*</div> end col-sm-10*@
+            </div> @*end row*@
+}
+
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="registerLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form action="/Account/Register/" method="post" enctype="multipart/form-data">
+
+                        @Html.AntiForgeryToken()
+
+                        @Html.ValidationSummary("", new { @class = "text-danger" })
+                        <div class="">
+                            <fieldset>
+                                <legend>
+                                    Register <a href="" target=""></a>
+                                </legend>
+                                <div class="item">
+                                    <div class="row">
+                                        @*<label class="col-md-4">Profile Picture</label>*@
+                                        <div class="col-md-12 col-sm-12">
+                                            @*<img class="img-thumbnail img-responsive col-md-12 " src="~/Images/DP-300x300.png" style="background-size:cover; height:280px;" />*@
+                                            <img id="IMG" class="img-thumbnail img-responsive col-md-12" src="~/Images/Profile_Placeholder.jpg" style="background-size:cover; height:280px;" />
+                                            <input accept=".png, .jpg, .jpeg" required name="imgUrl" id="imgurl" class="form-control" type="file" onchange="fun(this)" />
+                                            <div class="invalid-feedback">Only jpg/jpeg and png files are allowed!</div>
+                                            <script>
+                                                function readURL(input) {
+
+                                                    if (input.files && input.files[0]) {
+                                                        var reader = new FileReader();
+
+                                                        reader.onload = function (e) {
+
+                                                            $('#IMG')
+                                                                .attr('src', e.target.result)
+                                                            //.width(150)
+                                                            //.height(200);
+                                                        };
+
+                                                        reader.readAsDataURL(input.files[0]);
+
+                                                    }
+                                                }
+                                                function fun(input) {
+                                                    //$('#imgurl').blur(function() {
+                                                    debugger
+                                                    //function validateFileType() {
+                                                    var fileName = document.getElementById("imgurl").value;
+                                                    var idxDot = fileName.lastIndexOf(".") + 1;
+                                                    var extFile = fileName.substr(idxDot, fileName.length).toLowerCase();
+                                                    if (extFile == "jpg" || extFile == "jpeg" || extFile == "png") {
+                                                        readURL(input);
+                                                    } else {
+                                                        //alert("Only jpg/jpeg and png files are allowed!");
+                                                        $('#imgurl').addClass("is-invalid");
+                                                    }
+                                                    //}
+
+                                                    //});
+                                                }
+
+
+                                            </script>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="item">
+                                    <label>First Name:</label>
+                                    <input required name="FirstName" id="fName" size="24" class="form-control" type="text" placeholder="Enter First Name">
+                                </div>
+                                <div class="item">
+                                    <label>Last Name:</label>
+                                    <input required name="LastName" id="lName" size="24" class="form-control" type="text" placeholder="Enter Last Name">
+                                </div>
+                                <div class="item">
+                                    <label>Email:</label>
+                                    <input required name="Email" id="txtemail" size="24" class="form-control" type="email" placeholder="Enter Email">
+                                </div>
+
+                                <div class="item">
+                                    <label>Password:</label>
+                                    <input required name="Password" id="txtpassword" value="" size="24" class="form-control" type="password" placeholder="Enter Your Password">
+                                </div>
+                                <div class="item">
+                                    <label>ConfirmPassword:</label>
+                                    <input required name="ConfirmPassword" id="txtconfirmpassword" value="" size="24" class="form-control" type="password" placeholder="Confirm Your Password">
+                                </div>
+                                <label class="danger-color col-form-label"></label>
+                        </div>
+                        <input name="server" value="1" type="hidden">
+                        </fieldset>
+                        <fieldset class="tblFooters">
+                            <button name="btngo" id="btnGo" type="submit" class="btn btn-primary flat pull-right">Go</button>
+                        </fieldset>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    @*<div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="registerLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <!-- <div class="modal-header">
+                   <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div> -->
+                <div class="modal-body">
+                    <form action="/Account/Register/" method="post" enctype="multipart/form-data">
+
+                        @Html.AntiForgeryToken()
+
+                        @Html.ValidationSummary("", new { @class = "text-danger" })
+                        <div class="">
+                            <fieldset>
+                                <legend>
+                                    Register <a href="" target=""></a>
+                                </legend>
+                                <div class="item">
+                                    <div class="row">
+                                        @*<label class="col-md-4">Profile Picture</label>*
+                                        <div class="col-md-12 col-sm-12">
+                                            @*<img class="img-thumbnail img-responsive col-md-12 " src="~/Images/DP-300x300.png" style="background-size:cover; height:280px;" />
+                                            <input required name="imgUrl" id="imgurl" class="form-control-file" type="file" onchange="readURL(this)">
+                                            <img id="IMG" class="img-thumbnail img-responsive col-md-12" src="" @*style="background-size:cover; height:280px;" />
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="item">
+                                    <label>First Name:</label>
+                                    <input required name="FirstName" id="fName" size="24" class="form-control" type="text" placeholder="Enter First Name">
+                                </div>
+                                <div class="item">
+                                    <label>Last Name:</label>
+                                    <input required name="LastName" id="lName" size="24" class="form-control" type="text" placeholder="Enter Last Name">
+                                </div>
+                                <div class="item">
+                                    <label>Email:</label>
+                                    <input required name="Email" id="txtemail" size="24" class="form-control" type="text" placeholder="Enter Email">
+                                </div>
+                                <div class="item">
+                                    <label>Phone Number:</label>
+                                    <input required name="PhoneNumber" id="txtphonenumber" size="24" class="form-control" type="tel" placeholder="Enter Phone Number">
+                                </div>
+
+                                <div class="item">
+                                    <label>Password:</label>
+                                    <input required name="Password" id="txtpassword" value="" size="24" class="form-control" type="password" placeholder="Enter Your Password">
+                                </div>
+                                <div class="item">
+                                    <label>ConfirmPassword:</label>
+                                    <input required name="ConfirmPassword" id="txtpassword" value="" size="24" class="form-control" type="password" placeholder="Confirm Your Password">
+                                </div>
+                                <label class="danger-color col-form-label">@ViewBag.logfailed</label>
+</div>
+                        <input name="server" value="1" type="hidden">
+                        </fieldset>
+                        <fieldset class="tblFooters">
+                            <button name="btngo" id="btnGo" type="submit" class="btn btn-primary flat pull-right">Go</button>
+                        </fieldset>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>*@
+    <div class="modal fade" id="" tabindex="-1" role="dialog" aria-labelledby="checkoutLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <!-- <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div> -->
+                <div class="modal-body">
+
+                    <form action="" method="get">
+                        <div class="">
+                            <fieldset>
+                                <legend>
+                                    RE-STOCK<a href="" target=""></a>
+                                </legend>
+                                <div class="item">
+                                    <label>Client :</label>
+                                    <input required name="clientname" id="txtclient" size="24" class="form-control" type="text" placeholder="Client Name">
+                                    @*@Html.ValidationMessageFor(m => m.clientname, "", new { @class = "danger" })*@
+                                </div>
+
+                                <input name="server" value="1" type="hidden">
+                            </fieldset>
+                            <fieldset class="tblFooters">
+                                <button name="btncheckout" id="btnGo" type="button" onclick="ModalButton()" class="btn btn-primary flat pull-right">Go</button>
+                            </fieldset>
+                        </div>
+
+                    </form>
+
+
+
+                </div>
+            </div>
+        </div>
+        <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Send message</button>
+        </div> -->
+    </div>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    @*<script src="~/startbootstrap-creative-master/vendor/jquery/jquery.min.js"></script>*@
+    @*<script src="~/startbootstrap-creative-master/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>*@
+    <!-- Plugin JavaScript -->
+    <script src="~/startbootstrap-creative-master/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="~/startbootstrap-creative-master/vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="~/startbootstrap-creative-master/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="~/Scripts/Autocomplete.js"></script>
+    <script src="~/startbootstrap-creative-master/js/creative.min.js"></script>
+    @*<script src="~/Scripts/Home.js"></script>
+        <script src="~/Scripts/ajax.js"></script>
+        <script src="~/Scripts/searchAjax.js"></script>*@
+    <script src="~/Scripts/sweetalert.min.js"></script>
+    <script src="~/Scripts/addtotrans.js"></script>
+</body>
+</html>

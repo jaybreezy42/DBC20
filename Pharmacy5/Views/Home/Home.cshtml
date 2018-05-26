@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@section styles {
+   <link href="~/MDB_Free/css/mdb.min.css" rel="stylesheet" />
+    
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<form method="post" action="/Home/Home">
+        <div class="row usermainpage">
+            <div class="firstdiv row">
+                <div class="input-group">
+                    @Html.TextBox("txtSearch", "", new { @class = "form-control search", @placeholder = "Enter Name of Drug" })
+                    <button class="btn btn-primary" id="btnSearch" type="submit">Search</button>
+                </div>
+                @foreach (var item in ViewBag.SearchResult)
+                {
+
+                    <div class="col-md-2 column productbox">
+                        <img src="http://placehold.it/460x250/e67e22/ffffff&text=HTML5" alt="@item.BatchNo" class="img-responsive">
+                        <div class="producttitle">@item.BrandName @item.Dose @item.DoseName</div>
+                        <div class="producttitle">@item.GenericName</div>
+                        <div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button">ADD</a></div><div class="pricetext">£@item.SellingUnitPrice</div></div>
+                    </div>
+                }
+
+            </div>
+
+
+
+        </div>
+    </form>
+@section Scripts {
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    
+    <script src="~/MDB_Free/js/mdb.min.js"></script>
+        <script src="~/MDB_Free/js/popper.min.js"></script>
+}
