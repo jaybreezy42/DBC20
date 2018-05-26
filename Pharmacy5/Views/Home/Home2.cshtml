@@ -1,0 +1,446 @@
+﻿@model Pharmacy5.Models.transaction
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @*<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
+        <title>Creative - Start Bootstrap Theme</title>
+        <link href="~/startbootstrap-creative-master/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <!-- Custom fonts for this template -->
+
+
+        <link href="~/startbootstrap-creative-master/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+        <!-- Plugin CSS -->
+        <link href="~/startbootstrap-creative-master/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" />
+        <!-- Custom styles for this template -->
+        <link href="~/startbootstrap-creative-master/css/creative.css" rel="stylesheet" />
+        <link href="~/Content/custom.css" rel="stylesheet" />
+        <link href="~/Content/main1form.css" rel="stylesheet" />*@
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
+    <title>Creative - Start Bootstrap Theme</title>
+
+    <link href="~/startbootstrap-creative-master/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom fonts for this template -->
+
+
+    <link href="~/startbootstrap-creative-master/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="~/startbootstrap-creative-master/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="~/startbootstrap-creative-master/css/creative.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/rotating-card.css" rel="stylesheet" />
+    <link href="~/Content/custom.css" rel="stylesheet" />
+    <link href="~/Content/main1form.css" rel="stylesheet" />
+</head>
+<body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="/Home/Home2/">LizMat Pharmacy</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    @*<li class="nav-item">
+                            <a class="nav-link js-scroll-trigger aboutnav" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger servicesnav" href="#services" title="Check Medicine Availability">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger contactnav" href="#contact">Contact</a>
+                        </li>*@
+                    @using Microsoft.AspNet.Identity
+                    @if (Request.IsAuthenticated)
+                    {
+                        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            <ul class="nav navbar-nav navbar-right">
+
+                                @if (ViewBag.UserRole == "admin")
+                                {
+                                    <li class="nav-item">
+                                        @Html.ActionLink("Dashboard", "AdminPanel", "Home", routeValues: null, htmlAttributes: new { @title = "Admin Page", @class = "nav-link js-scroll-trigger" })
+                                    </li>
+                                }
+                                <li class="nav-item">
+                                    @Html.ActionLink("Hello " + User.Identity.GetUserName(), "", "", routeValues: null, htmlAttributes: new { @title = "", @class = "nav-link js-scroll-trigger" })
+                                </li>
+                                <li class="nav-item"><a class="nav-link js-scroll-trigger contactnav" href="javascript:document.getElementById('logoutForm').submit()">LOG OFF</a></li>
+                            </ul>
+                        }
+                    }
+                    else
+                    {
+                        @*<li class="nav-item">@Html.ActionLink("REGISTER", "Register", "Account", routeValues: null, htmlAttributes: new { @id = "registerLink", @class = "nav-link js-scroll-trigger" })</li>*@
+                        @*<li class="nav-item">@Html.ActionLink("LOG IN", "Login", "Account", routeValues: null, htmlAttributes: new { @id = "loginLink", @class = "nav-link js-scroll-trigger" })</li>*@
+
+                        @*<li class="nav-item">
+                                <a class="nav-link js-scroll-trigger contactnav" href="#" id="btnmodalreg" data-toggle="modal" data-target="#register" data-whatever="getbootstrap">REGISTER</a>
+                            </li>*@
+
+
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger contactnav" href="#" id="btnmodal" data-toggle="modal" data-target="#exampleModal" data-whatever="getbootstrap">LOG IN</a>
+                        </li>
+                    }
+
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <form id="form1" method="post" action="/Home/Home2">
+        <header class="masthead text-center text-white d-flex" id="about">
+            <div class="container my-auto">
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <h1 class="text-uppercase">
+                            <strong>Health is Wealth</strong>
+                        </h1>
+
+                    </div>
+                    @using Microsoft.AspNet.Identity
+                    @if (Request.IsAuthenticated)
+                    {
+
+                        <div class="col-lg-8 mx-auto">
+                            <p class="text-faded mb-5"></p>
+                            <div><h2 class="text-uppercase"><strong>Search By</strong></h2></div>
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-primary">
+                                    <input type="radio" name="options" id="option1" autocomplete="off" checked>Name
+                                </label>
+                                <label class="btn btn-primary">
+                                    <input type="radio" name="options" id="option2" autocomplete="off"> BarCode
+                                </label>
+                            </div>
+                            <input required class="form-control txtsearch " placeholder="Search Medicine by Name" name="searchitem" id="txtSearch" />
+
+                        </div>
+                    }
+
+
+                </div>
+            </div>
+        </header>
+    </form>
+
+
+    <section id="search">
+        <div class="container">
+            <div class="container form-horizontal">
+                <form action="/Home/AddtoTrans/" method="post" id="form2">
+                    <div class="row">
+
+                        @foreach (var item in ViewBag.SearchResult)
+                        {
+                            <div class="container col-md-4">
+                                <div class="column productbox" name="@item.DrugID">
+                                    <img src="" class="img-responsive">
+                                    <div style="height:115px;">
+                                        <div class="producttitle" id="BrandName" name="BrandName"> @item.BrandName  </div>
+                                        <div class="producttitle"><p>@item.Dose @item.DoseName</p></div>
+                                        <div class="producttitle" id="GenericName" name="GenericName"> @item.GenericName </div>
+                                        @*<div class="productprice" id="PriceSell" name="@item.SellingUnitPrice"></div>*@
+                                    </div>
+                                    <div class="productprice" id="PriceSell" name="@item.SellingUnitPrice" data-sm1="@item.Dose" data-sm2="@item.DoseName"></div>
+                                    <div class="pull-right">
+                                        <button name="btnsubmit" class="btn btn-primary flat btn-sm" type="button" data-name="@item.DrugID">ADD TO CART</button>
+                                    </div>
+                                    <div class="pricetext" id="Price" name="PriceSell">
+                                        ₵@item.SellingUnitPrice
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        }
+
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-lg-2 col-md-2">
+            </div>
+
+            <div class="col-lg-8 col-md-8 table">
+
+                @Html.ValidationMessageFor(m => m.Quantity, "", new { @class = "danger" })
+                <table id="table" class="display table table-responsive table-hover table-stripped col-lg-8 col-md-8">
+                    <thead>
+                        <tr>
+                            <th>Brand Name   </th>
+                            <th>Generic Name </th>
+                            <th>Dose        </th>
+                            <th>Price       </th>
+                            <th>In Stock      </th>
+                            <th>Quantity       </th>
+                            <th>Status</th>
+                            <th>Process</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <form id="form3" action="" method="post" name="sell">
+                            @Html.ValidationMessageFor(m => m.Quantity, "", new { @class = "danger" })
+                            @foreach (var item in ViewBag.Pending)
+                            {
+                                <tr>
+                                    <td>@item.BrandName</td>
+                                    <td>@item.GenericName</td>
+                                    <td>@item.Dose</td>
+                                    <td>₵@item.UnitPrice</td>
+                                    <td></td>
+                                    <td>
+                                        <select name="Quantity" data-name="@item.DrugID" data-cho="@item.transactionID">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                            <option>10</option>
+                                        </select>
+                                        @*<input name="Quantity" class="form-control" type="number" data-name="@item.DrugID" data-cho="@item.transactionID" />*@
+                                    </td>
+                                    <td>@item.Status</td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <label style="font-size: 2em">
+                                                <input type="checkbox" name="check" class="check" value="" data-name="@item.DrugID" />
+                                                <span class="cr"><i class="cr-icon fa fa-check"></i></span>
+
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td><button type="button" class="btn btn-danger flat" id="btndelete" data-id="@item.transactionID"><span class="glyphicon glyphicon-remove"></span>Delete</button></td>
+                                </tr>
+
+                            }
+
+
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>  </th>
+                            <th></th>
+                            <th>     </th>
+                            <th> </th>
+                            <th>  </th>
+                            <th>  </th>
+                            <th></th>@using Microsoft.AspNet.Identity
+                            @if (Request.IsAuthenticated)
+                            {
+                                <th></th>
+                                <td>
+                                    <button class="btn btn-info flat" type="button" name="btnsell" id="btnsell" data-toggle="modal" data-target="#checkout" data-whatever="getbootstrap">Sell</button>
+                                </td>}
+                        </tr>
+                    </tfoot>
+                    </form>
+                </table>
+
+                <form id="theform" action="/Home/UpdateTrans/" method="get" hidden="hidden"></form>
+
+            </div>
+
+
+        </div>
+
+
+
+
+    </section>
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-heading">Let's Get In Touch!</h2>
+                    <hr class="my-4">
+                    <p class="mb-5"> Give us a call or send us an email and we will get back to you as soon as possible!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 ml-auto text-center">
+                    <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
+                    <p>0505813315/0547858646</p>
+                </div>
+                <div class="col-lg-4 mr-auto text-center">
+                    <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
+                    <p>
+                        <a href="#">lizmat@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <table class="table-bordered table-hover"></table>
+    </section>
+
+    @* Modal for Log IN *@
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <!-- <div class="modal-header">
+                   <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div> -->
+                <div class="modal-body">
+
+
+
+
+                    <form action="/Account/Login/" method="post">
+                        @Html.AntiForgeryToken()
+                        <div class="">
+                            <fieldset>
+                                <legend>
+                                    Log in<a href="" target=""></a>
+                                </legend>
+                                <div class="item">
+                                    <label>Employee Email:</label>
+                                    <input required name="Email" id="txtemail" size="24" class="form-control" type="email" placeholder="Enter Email">
+                                </div>
+                                <div class="text-danger col-form-label" id="error">@ViewBag.ModelError</div>
+
+                                <div class="item">
+                                    <label>Password:</label>
+                                    <input required name="Password" id="txtpassword" value="" size="24" class="form-control" type="password" placeholder="Enter Your Password">
+                                </div>
+                                <div class="text-danger col-form-label" id="failed">@ViewBag.logfailed</div>
+</div>
+                        <input name="server" value="1" type="hidden">
+                        </fieldset>
+                        <fieldset class="tblFooters">
+                            <button name="btngo" id="btnGo" type="submit" class="btn btn-primary flat pull-right">Go</button>
+                        </fieldset>
+                </div>
+
+                </form>
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+    @* Modal for Check Out Transaction *@
+    <div class="modal fade" id="checkout" tabindex="-1" role="dialog" aria-labelledby="checkoutLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <!-- <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div> -->
+                <div class="modal-body">
+
+                    <form action="" method="get">
+                        <div class="">
+                            <fieldset>
+                                <legend>
+                                    Transaction<a href="" target=""></a>
+                                </legend>
+                                <div class="item">
+                                    <label>Client :</label>
+                                    <input required name="clientname" id="txtclient" size="24" class="form-control" type="text" placeholder="Client Name">
+                                    <div class="invalid-feedback">Please enter Client Name.</div>
+                                </div>
+                                <div class="item">
+                                    <label>Phone Number:</label>
+                                    <input required name="clientphone" id="txtphone" value="" size="24" class="form-control" type="text" placeholder="Enter Phone Number of Client">
+                                </div>
+                                <table class="table table-hover table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Brand Name   </th>
+                                            <th>Price </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="drugdetail">
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td>Total Price</td>
+                                            <td name="totalamount" id="txttotalamount"></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                                <input name="server" value="1" type="hidden">
+                            </fieldset>
+                            <fieldset class="tblFooters">
+                                <button name="btncheckout" id="btnGo" type="button" onclick="ModalButton()" class="btn btn-primary flat pull-right">Go</button>
+                            </fieldset>
+                        </div>
+
+                    </form>
+
+
+
+                </div>
+            </div>
+        </div>
+        <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Send message</button>
+        </div> -->
+    </div>
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/startbootstrap-creative-master/vendor/jquery/jquery.min.js"></script>
+    <script src="~/startbootstrap-creative-master/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="~/startbootstrap-creative-master/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="~/startbootstrap-creative-master/vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="~/startbootstrap-creative-master/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="~/Scripts/Autocomplete.js"></script>
+    <script src="~/startbootstrap-creative-master/js/creative.min.js"></script>
+    <script src="~/Scripts/sweetalert.min.js"></script>
+    <script src="~/Scripts/addtotrans.js"></script>
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+</body>
+</html>

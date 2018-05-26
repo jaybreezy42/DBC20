@@ -1,0 +1,66 @@
+﻿@model Pharmacy5.Models.transaction
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>transaction</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.clientinfo.clientname)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.clientinfo.clientname)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Quantity)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.TotalAmount)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.TotalAmount)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Status)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Status)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.DateOfTrans)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.DateOfTrans)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.transactionID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

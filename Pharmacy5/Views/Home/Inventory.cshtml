@@ -1,0 +1,494 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
+    <title>Creative - Start Bootstrap Theme</title>
+
+    @*<link href="~/startbootstrap-creative-master/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />*@
+    <!-- Custom fonts for this template -->
+
+
+    <link href="~/startbootstrap-creative-master/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="~/startbootstrap-creative-master/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="~/Content/Animate.css" rel="stylesheet" />
+    <link href="~/startbootstrap-creative-master/css/creative.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/DataTables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    @*<link href="~/Content/rotating-card.css" rel="stylesheet" />
+        <link href="~/Content/custom.css" rel="stylesheet" />*@
+    <link href="~/Content/main1form.css" rel="stylesheet" />
+    <link href="~/Content/Inventory.css" rel="stylesheet" />
+
+</head>
+<body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="/Home/Home2/">LizMat Pharmacy</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+
+
+                <ul class="navbar-nav ml-auto">
+                    @*<li class="nav-item dropdown">
+                                    <a role="button" class="dropdown-toggle hover nav-link js-scroll-trigger" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#" title="Manage Employees">Employee</a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <a class="dropdown-item nav-link js-scroll-trigger contactnav" href="#" id="btnmodalreg" data-toggle="modal" data-target="#register" data-whatever="getbootstrap">Registration</a>
+
+                                        @*<a href="" id="btnrolemodal" data-toggle="modal" data-target="" data-whatever="" class="dropdown-item nav-link js-scroll-trigger">Assign Roles</a>
+                        </div>
+
+                        </li>*@
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger servicesnav" href="/Home/AdminPanel/" title="">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger contactnav" href="#contact">Reports</a>
+                    </li>
+
+
+                    @using Microsoft.AspNet.Identity
+                    @if (Request.IsAuthenticated)
+                    {
+                        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            <ul class="nav navbar-nav navbar-right">
+
+                                @if (ViewBag.UserRole == "admin")
+                                {
+                                    <li class="nav-item">
+                                        @Html.ActionLink("Dashboard", "AdminPanel", "Home", routeValues: null, htmlAttributes: new { @title = "Admin Page", @class = "nav-link js-scroll-trigger" })
+                                    </li>
+                                }
+
+                                <li class="nav-item">
+                                    @Html.ActionLink("Hello " + User.Identity.GetUserName(), "", "", routeValues: null, htmlAttributes: new { @title = "", @class = "nav-link js-scroll-trigger" })
+                                </li>
+                                <li class="nav-item"><a class="nav-link js-scroll-trigger contactnav" href="javascript:document.getElementById('logoutForm').submit()">LOG OFF</a></li>
+                            </ul>
+                        }
+                    }
+                    else
+                    {
+                        @*<li class="nav-item">@Html.ActionLink("REGISTER", "Register", "Account", routeValues: null, htmlAttributes: new { @id = "registerLink", @class = "nav-link js-scroll-trigger" })</li>*@
+                        @*<li class="nav-item">@Html.ActionLink("LOG IN", "Login", "Account", routeValues: null, htmlAttributes: new { @id = "loginLink", @class = "nav-link js-scroll-trigger" })</li>*@
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger contactnav" href="#" id="btnmodalreg" data-toggle="modal" data-target="#register" data-whatever="getbootstrap">REGISTER</a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger contactnav" href="#" id="btnmodal" data-toggle="modal" data-target="#exampleModal" data-whatever="getbootstrap">LOG IN</a>
+                        </li>
+                    }
+                    <li class="nav-item dropdown">
+                        <a role="button" class="dropdown-toggle hover nav-link js-scroll-trigger" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#" title="Expired Products">
+                            <i class="fa fa-clock-o fa-2x num badge-wrapper" data-check="@ViewBag.DueToExpireDrugs">
+                                @if (ViewBag.DueToExpireDrugs != "")
+    {
+                            <span class="badge">@ViewBag.DueToExpireDrugs</span>
+}
+
+                            </i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <ul class="list-group nav navbar-nav">
+                                @foreach (var item in ViewBag.ExpireDrugs)
+                                {
+                                <li class="nav-item">
+                                    <a href="" class="nav-link js-scroll-trigger contactnav">@item.BrandName @item.Dose @item.DoseName</a>
+                                </li>
+                                }
+                                @*<table class="table table-hover table-condensed ">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Product</td>
+                                                    <td>Expire Date</td>
+                                                </tr>
+                                                @foreach (var item in ViewBag.dad)
+            {
+                                            <tr>
+                                                <td><a href="" class="nav-item">@item.BrandName @item.GenericName @item.Dose @item.DoseName</a></td>
+                                                <td>@item.ExpireDate</td>
+                                            </tr>
+
+        }
+
+                                            </tbody>
+                                                </table>*@
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a role="button" class="dropdown-toggle hover nav-link js-scroll-trigger" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#" title="Out of Stock Products">
+                            <i class="fa fa-bell-o fa-2x outofstocknum badge-wrapper" data-check="@ViewBag.outnum">
+                                @if (ViewBag.outnum != "")
+                                {
+                                <span class="badge">@ViewBag.outnum</span>
+                                }
+                                
+                            </i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <ul class="list-group nav navbar-nav table-hover">
+                                @foreach (var item in ViewBag.outofstock)
+                                        {
+                                                                <li class="nav-item">
+                                                                    <a href=""  class="nav-link js-scroll-trigger contactnav">@item.BrandName @item.Dose @item.DoseName @item.mainstock.QuantityInStock</a>
+                                                                </li>
+                                    }
+                                @*<table class="table table-hover table-condense table-warning">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td>Product</td>
+                                                                                <td>Quantity InStock</td>
+                                                                            </tr>
+                                                                            @foreach (var item in ViewBag.outofstock)
+                                        {
+
+
+                                                                        <tr>
+                                                                            <td>@item.BrandName @item.Dose @item.DoseName</td>
+                                                                            <td>@item.mainstock.QuantityInStock</td>
+                                                                        </tr>
+
+                                    }
+
+                                                                        </tbody>
+                                                                    </table>*@
+
+                            </ul>
+                        </div>
+
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <header class="masthead text-center text-white d-flex">
+        <div class="container my-auto">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                        <a href="#"><span class="info-box-icon bg-aqua"><i class="fa fa-money"></i></span></a>
+                        <div class="info-box-content">
+                            <br>
+                            <span class="info-box-text">Total Cash</span>
+                            <br>
+                            <span class="info-box-number">
+                                @ViewBag.totalcash
+                            </span>
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <!-- /.col -->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                        <span class="info-box-icon bg-red"><i class="fa fa-money"></i></span>
+                        <div class="info-box-content">
+                            <br>
+                            <span class="info-box-text">Today's Sales</span>
+                            <br>
+                            <span class="info-box-number">
+                               @ViewBag.todaycash
+                            </span>
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <!-- /.col -->
+                <!-- fix for small devices only -->
+
+                <div class="clearfix visible-sm-block"></div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                        <span class="info-box-icon bg-green"><i class="fa fa-shopping-cart"></i></span>
+                        <div class="info-box-content">
+                            <br>
+                            <span class="info-box-text">Daily Transactions</span>
+                            <br>
+                            <span class="info-box-number">
+                                @ViewBag.Tnumber
+                            </span>
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <!-- /.col -->
+
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                        <span class="info-box-icon bg-yellow"><i class="fa fa-users"></i></span>
+                        <div class="info-box-content">
+                            <br>
+                            <span class="info-box-text">Employees</span>
+                            <br>
+                            <span class="info-box-number">
+                                @ViewBag.NOU
+                            </span>
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <!-- /.col -->
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <fieldset>
+                                <legend>Main Stock<a href="" target=""></a><button class="pull-right btn btn-primary flat" id="btnaddnewprodcut" data-toggle="modal" data-target="#addnewproduct">Add New Product</button></legend>
+                                <table id="" class="table table-responsive table-hover table-striped">
+                                    <thead>
+                                        <tr>
+
+                                            <th class="tt">Brand Name</th>
+                                            <th class="tt">Quantity InStock</th>
+                                            <th class="tt">Expire Date</th>
+                                            <th class="tt">Actions</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in ViewBag.productDetails)
+                                            {
+                                                <tr class="">
+                                                    <td>@item.BrandName</td>
+
+                                                    <td name="QuantityReload">@item.mainstock.QuantityInStock</td>
+                                                    <td>@item.ExpireDate</td>
+                                                    <td><a href="" title="Re-Stock Product"><span class="fa fa-refresh fa-2x"></span></a></td>
+
+                                                </tr>
+
+                                            }
+
+
+                                    </tbody>
+                                </table>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-12">
+                            @* place a chart of employees,number of sales, and other parameters *@
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class=" col-md-7">
+                    <fieldset sytle="margin-bottom:10px;">
+                        <legend>Latest Transactions<a href="" target=""></a></legend>
+                        <table id="table" class="display table table-responsive table-hover table-striped">
+                            <thead>
+                                <tr>
+
+                                    <th class="tt">Product Name  </th>
+                                    <th class="tt">Unit Price</th>
+                                    <th class="tt">Total Amount</th>
+                                    <th class="tt">Client Name</th>
+                                    <th class="tt">Date Of Transaction</th>
+                                </tr>
+                            </thead>
+                            <tbody id="demo data-container">
+
+                                @foreach (var item in ViewBag.Transaction)
+                                    {
+                                        <tr class="">
+
+
+                                            <td>@item.BrandName</td>
+                                            <td>@item.UnitPrice</td>
+                                            <td>@item.TotalAmount</td>
+                                            <td>@item.clientinfo.clientname</td>
+                                            <td>@item.DateOfTrans</td>
+                                        </tr>
+                                    }
+
+
+
+                            </tbody>
+                        </table>
+
+                    </fieldset>
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <div class="modal fade" id="addnewproduct" tabindex="-1" role="dialog" aria-labelledby="addnewproductLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form action="/drugs1/Create" method="post" id="invform">
+                    @Html.AntiForgeryToken();
+                    <div class="modal-body">
+
+
+                        <div class="">
+                            <fieldset>
+                                <legend>
+                                    New Product<a href="" target=""></a>
+                                </legend>
+                                <div class="item">
+                                    <label>Image:</label>
+                                    <img src="" id="imgurl" class="img-thumbnail img-responsive col-md-12" />
+                                    <input id="Imgurl" name="ImgUrl" value="" size="24" class="form-control" type="file" onchange="fun(this);" accept=".png, .jpg, .jpeg">
+                                    <div class="invalid-feedback">Only jpg/jpeg and png files are allowed!</div>
+                                </div>
+                                <script>
+                                    function readURL(input) {
+
+                                        if (input.files && input.files[0]) {
+                                            var reader = new FileReader();
+
+                                            reader.onload = function (e) {
+
+                                                $('#imgurl')
+                                                    .attr('src', e.target.result)
+                                                //.width(150)
+                                                //.height(200);
+                                            };
+
+                                            reader.readAsDataURL(input.files[0]);
+
+                                        }
+                                    }
+                                    function fun(input) {
+                                        //$('#Imgurl').blur(function () {
+                                        debugger
+                                        //function validateFileType() {
+                                        var fileName = document.getElementById("Imgurl").value;
+                                        var idxDot = fileName.lastIndexOf(".") + 1;
+                                        var extFile = fileName.substr(idxDot, fileName.length).toLowerCase();
+                                        if (extFile == "jpg" || extFile == "jpeg" || extFile == "png") {
+                                            $('#Imgurl').removeClass("is-invalid");
+                                            readURL(input);
+
+                                        } else {
+                                            //alert("Only jpg/jpeg and png files are allowed!");
+                                            $('#Imgurl').addClass("is-invalid");
+                                            $('#Imgurl').val() = "";
+                                            $('#Imgurl').text() = "";
+                                        }
+                                        //}
+
+                                        //});
+                                    }
+                                </script>
+                                <div class="invalid-feedback">No, you missed this one.</div>
+                        </div>
+                        <div class="item">
+                            <label>Brand Name :</label>
+                            <input name="BrandName" id="txt" size="24" class="form-control warning" type="text" placeholder="Brand Name" required>
+                            <div class="invalid-feedback">No, you missed this one.</div>
+                        </div>
+                        <div class="form-group has-error">
+                            <div class="item">
+                                <label>Generic Name:</label>
+                                <input name="GenericName" id="txt" value="" size="24" class="form-control" type="text" placeholder="Generic Name">
+                                <div class="invalid-feedback">No, you missed this one.</div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <label>Bar Code:</label>
+                            <input name="BarCode" id="txt" value="" size="24" class="form-control" type="text" placeholder="Scan BarCode">
+                            <div class="invalid-feedback">No, you missed this one.</div>
+                        </div>
+                        <div class="item">
+                            <label>Expire Date :</label>
+                            <input name="ExpireDate" id="expDate" size="24" class="form-control warning" type="date" placeholder="Expire Date" required>
+                            <div class="invalid-feedback">Sorry, Drug cannot be expired.</div>
+                        </div>
+                        <div class="item">
+                            <label>Dose:</label>
+                            <input name="Dose" id="txt" value="" size="24" class="form-control" type="text" placeholder="Dose">
+                            <div class="invalid-feedback">No, you missed this one.</div>
+
+                            <select name="DoseName" class="form-control">
+                                <option value="mg">mg</option>
+                                <option value="g">g</option>
+                                <option value="ml">ml</option>
+                                <option value="L">L</option>
+                            </select>
+                        </div>
+                        <div class="item">
+                            <label>Unit Selling Price:</label>
+                            <input name="SellingUnitPrice" id="txt" value="" size="24" class="form-control" type="text" required>
+                            <div class="invalid-feedback">No, you missed this one.</div>
+                        </div>
+
+
+                        </fieldset>
+                        <fieldset class="tblFooters">
+                            <button name="btnaddnewproduct" id="btnadd" type="submit" onclick="" class="btn btn-primary flat pull-right">Go</button>
+                        </fieldset>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    @*<script src="~/startbootstrap-creative-master/vendor/jquery/jquery.min.js"></script>*@
+    @*<script src="~/startbootstrap-creative-master/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>*@
+    <!-- Plugin JavaScript -->
+    <script src="~/startbootstrap-creative-master/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="~/startbootstrap-creative-master/vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="~/startbootstrap-creative-master/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="~/Scripts/Autocomplete.js"></script>
+    <script src="~/startbootstrap-creative-master/js/creative.min.js"></script>
+    @*<script src="~/Scripts/Home.js"></script>
+        js"></script>
+        hAjax.js"></script>*@
+    <script src="~/Content/DataTables/js/jquery.dataTables.js"></script>
+
+
+    <script src="~/Scripts/Inventory.js"></script>
+    <script src="~/Scripts/sweetalert.min.js"></script>
+    <script src="~/Scripts/addtotrans.js"></script>
+    <script src="~/Content/Notify/bootstrap-notify-master/bootstrap-notify.min.js"></script>
+    <script src="~/Scripts/Notify.js"></script>
+</body>
+</html>

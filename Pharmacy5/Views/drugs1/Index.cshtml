@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Pharmacy5.Models.drug>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.GenericName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BrandName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dose)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DoseName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SellingUnitPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImgUrl)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.GenericName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrandName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dose)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DoseName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SellingUnitPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImgUrl)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.DrugID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.DrugID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.DrugID })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

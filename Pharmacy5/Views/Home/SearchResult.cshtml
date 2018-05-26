@@ -1,0 +1,38 @@
+﻿@model Pharmacy5.Models.drug
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<form action="/Home/Home" method="get">
+    <div class="row usermainpage">
+        @foreach (var item in ViewBag.SearchResult)
+        {
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-red"><img src="@item.BatchNo" /></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">@item.BrandName</span>
+                        <span class="info-box-number">@item.GenericName</span>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+            </div>
+        }
+    </div>
+</form>
+<div class="row usermainpage">
+    @foreach (var item in ViewBag.SearchResult)
+    {
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="info-box">
+                <span class="info-box-icon bg-red"><img src="@item.BatchNo" /></span>
+                <div class="info-box-content">
+                    <span class="info-box-text">@item.BrandName</span>
+                    <span class="info-box-number">@item.GenericName</span>
+                </div>
+                <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+        </div>
+    }
+</div>
+<script src="~/Scripts/bootstrap.min.js"></script>
+
