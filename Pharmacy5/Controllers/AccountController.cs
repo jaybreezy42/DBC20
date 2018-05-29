@@ -496,7 +496,7 @@ namespace Pharmacy5.Controllers
             {
                 return Redirect(returnUrl);
             }
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Home2", "Home");
         }
 
         internal class ChallengeResult : HttpUnauthorizedResult

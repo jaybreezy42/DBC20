@@ -6,7 +6,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using Pharmacy5.Models;
-
+using System.Configuration;
 namespace Pharmacy5
 {
     public partial class Startup
@@ -24,6 +24,9 @@ namespace Pharmacy5
             // Configure the sign in cookie
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
+                // log the user off after a period of inactivity
+                //SlidingExpiration = true,
+                //ExpireTimeSpan = TimeSpan.FromMinutes(1),
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
                 LoginPath = new PathString("/Home/Home2"),
                 Provider = new CookieAuthenticationProvider
@@ -34,6 +37,7 @@ namespace Pharmacy5
                         validateInterval: TimeSpan.FromMinutes(30),
                         regenerateIdentity: (manager, user) => user.GenerateUserIdentityAsync(manager))
                 }
+                
             });            
             app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
 
@@ -58,11 +62,13 @@ namespace Pharmacy5
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = ConfigurationManager.AppSettings["ClientID"],
+                ClientSecret= ConfigurationManager.AppSettings["ClientSecret"]
+                //ClientId = "386036974400-sg434eckcpeju58t3n0jm5ilfqgd5uks.apps.googleusercontent.com",
+                //ClientSecret = "YFynTFesBdLblDOAonbAjt6x"
+            });
         }
     }
 }
