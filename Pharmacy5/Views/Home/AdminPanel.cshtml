@@ -181,10 +181,14 @@
                                 <div class="item">
                                     <div class="row">
                                         @*<label class="col-md-4">Profile Picture</label>*@
-                                        <div class="col-md-12 col-sm-12">
+                                        <div class="col-md-12 col-sm-12" id="">
                                             @*<img class="img-thumbnail img-responsive col-md-12 " src="~/Images/DP-300x300.png" style="background-size:cover; height:280px;" />*@
-                                            <img id="IMG" class="img-thumbnail img-responsive col-md-12" src="~/Images/Profile_Placeholder.jpg" style="background-size:cover; height:280px;" />
-                                            <input accept=".png, .jpg, .jpeg" required name="imgUrl" id="imgurl" class="form-control" type="file" onchange="fun(this)" />
+                                            <img id="imgurl" class="img-thumbnail img-responsive col-md-12" src="~/Images/Profile_Placeholder.jpg" style="background-size:cover; height:280px;" />
+                                            <div class="input-group" id="img_input">
+                                                <input accept=".png, .jpg, .jpeg" required name="imgUrl" id="Imgurl" class="form-control" type="file" onchange="fun(this)" />
+                                                <a class="btn btn-google" onclick="clearFileInputField('img_input')"><span class="fa fa-remove fa-2x"></span></a>
+                                            </div>
+                                            
                                             <div class="invalid-feedback">Only jpg/jpeg and png files are allowed!</div>
                                             <script>
                                                 function readURL(input) {
@@ -194,7 +198,7 @@
 
                                                         reader.onload = function (e) {
 
-                                                            $('#IMG')
+                                                            $('#imgurl')
                                                                 .attr('src', e.target.result)
                                                             //.width(150)
                                                             //.height(200);
@@ -208,14 +212,14 @@
                                                     //$('#imgurl').blur(function() {
                                                     debugger
                                                     //function validateFileType() {
-                                                    var fileName = document.getElementById("imgurl").value;
+                                                    var fileName = document.getElementById("Imgurl").value;
                                                     var idxDot = fileName.lastIndexOf(".") + 1;
                                                     var extFile = fileName.substr(idxDot, fileName.length).toLowerCase();
                                                     if (extFile == "jpg" || extFile == "jpeg" || extFile == "png") {
                                                         readURL(input);
                                                     } else {
                                                         //alert("Only jpg/jpeg and png files are allowed!");
-                                                        $('#imgurl').addClass("is-invalid");
+                                                        $('#Imgurl').addClass("is-invalid");
                                                     }
                                                     //}
 
@@ -393,9 +397,7 @@
     <!-- Custom scripts for this template -->
     <script src="~/Scripts/Autocomplete.js"></script>
     <script src="~/startbootstrap-creative-master/js/creative.min.js"></script>
-    @*<script src="~/Scripts/Home.js"></script>
-        <script src="~/Scripts/ajax.js"></script>
-        <script src="~/Scripts/searchAjax.js"></script>*@
+
     <script src="~/Scripts/sweetalert.min.js"></script>
     <script src="~/Scripts/addtotrans.js"></script>
 </body>

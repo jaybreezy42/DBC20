@@ -1,4 +1,8 @@
-﻿//import { on } from "cluster";
+﻿function clearFileInputField(tagId) {
+    document.getElementById(tagId).innerHTML = document.getElementById(tagId).innerHTML;
+    $('#imgurl').attr('src', '');
+}
+//import { on } from "cluster";
 
 function news() {
     location.reload(true);

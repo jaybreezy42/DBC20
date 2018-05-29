@@ -366,13 +366,22 @@
                                 <div class="item">
                                     <label>Image:</label>
                                     <img src="" id="imgurl" class="img-thumbnail img-responsive col-md-12" />
-                                    <input id="Imgurl" name="ImgUrl" value="" size="24" class="form-control" type="file" onchange="fun(this);" accept=".png, .jpg, .jpeg">
+                                    <div class="input-group-append" id="img_input">
+                                        <input id="Imgurl" name="ImgUrl" value="" size="24" class="form-control" type="file" onchange="fun(this);" accept=".png, .jpg, .jpeg">
+                                        <a class="btn btn-google" onclick="clearFileInputField('img_input')"><span class="fa fa-remove fa-2x"></span></a>
+                                    </div>
+                                    
                                     <div class="invalid-feedback">Only jpg/jpeg and png files are allowed!</div>
                                 </div>
                                 <script>
+                                    function clearFileInputField(tagId) {
+                                        document.getElementById(tagId).innerHTML = document.getElementById(tagId).innerHTML;
+                                        $('#Imgurl').trigger("onchange");
+                                        
+                                    }
                                     function readURL(input) {
 
-                                        if (input.files && input.files[0]) {
+                                        //if (input.length > 0 || input.length<0) {
                                             var reader = new FileReader();
 
                                             reader.onload = function (e) {
@@ -385,7 +394,7 @@
 
                                             reader.readAsDataURL(input.files[0]);
 
-                                        }
+                                        //}
                                     }
                                     function fun(input) {
                                         //$('#Imgurl').blur(function () {
@@ -394,7 +403,7 @@
                                         var fileName = document.getElementById("Imgurl").value;
                                         var idxDot = fileName.lastIndexOf(".") + 1;
                                         var extFile = fileName.substr(idxDot, fileName.length).toLowerCase();
-                                        if (extFile == "jpg" || extFile == "jpeg" || extFile == "png") {
+                                        if (extFile == "jpg" || extFile == "jpeg" || extFile == "png" || fileName == "") {
                                             $('#Imgurl').removeClass("is-invalid");
                                             readURL(input);
 
